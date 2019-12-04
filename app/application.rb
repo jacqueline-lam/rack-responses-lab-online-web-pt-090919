@@ -5,8 +5,7 @@ class Application
     resp = Rack::Response.new
     
     time = Time.now
-    hour = time.strftime("%k").to_i   # 0 - 23        
-    binding.pry
+    hour = time.strftime("%k").to_i   # 0 - 23
     
     if (0...12).include?(hour)
       resp.write "Good Morning!\n"
