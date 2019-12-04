@@ -4,7 +4,7 @@ class Application
  def call(env)
     resp = Rack::Response.new
     
-    time = Time.now
+    time = Time.new
     hour = time.strftime("%k").to_i   # 0 - 23
     
     if (0...12).include?(hour)
